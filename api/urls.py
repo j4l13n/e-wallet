@@ -15,7 +15,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.views.decorators.csrf import csrf_exempt
+from graphene_django.views import GraphQLView
+from django.conf import settings
+
+admin.site.site_header = 'Tekana E-Wallet Admin Portal'
+admin.site.site_title = 'Tekana E-Wallet Admin Portal'
+admin.site.index_title = 'Welcome to Tekana E-Wallet Admin Portal'
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('graphql/', csrf_exempt(GraphQLView.as_view(graphiql=True))),
 ]
