@@ -1,16 +1,16 @@
 import re
+from typing import Union
 from graphql import GraphQLError
-
 
 class Validators:
     """
-        Validators
+    Validators
     """
-    def __init__(self, email=None,
-                 username=None,
-                 phone_number=None,
-                 password=None,
-                 first_name=None):
+    def __init__(self, email: Union[str, None] = None,
+                 username: Union[str, None] = None,
+                 phone_number: Union[str, None] = None,
+                 password: Union[str, None] = None,
+                 first_name: Union[str, None] = None):
         self.email = email
         self.username = username
         self.phone_number = phone_number
@@ -18,7 +18,7 @@ class Validators:
         self.value = None
         self.first_name = first_name
 
-    def strip_value(self, value):
+    def strip_value(self, value: str) -> Union[str, None]:
         """
         Strip values of methods before validations
         Arguments:
@@ -30,7 +30,7 @@ class Validators:
         else:
             return None
 
-    def is_email(self, email):
+    def is_email(self, email: str) -> str:
         """
         Validate email
         Arguments:
@@ -42,7 +42,7 @@ class Validators:
             raise GraphQLError("Invalid Email")
         return self.email
 
-    def is_username(self, username):
+    def is_username(self, username: str) -> str:
         """
         Validate username
         Arguments:
@@ -53,7 +53,7 @@ class Validators:
             raise GraphQLError("Invalid Username")
         return self.username
 
-    def is_valid_password(self, password):
+    def is_valid_password(self, password: str) -> str:
         """
         Validate password
         Arguments:
@@ -67,14 +67,14 @@ class Validators:
                 'a number and a capital letter.')
         return self.password
 
-    def is_valid_name(self, first_name):
+    def is_valid_name(self, first_name: str) -> str:
         self.first_name = self.strip_value(first_name)
         if self.first_name:
             if re.match(r'[a-zA-Z ]', self.first_name) is None:
                 raise GraphQLError("Invalid First Name")
         return self.first_name
 
-    def is_phone_number(self, phone_number):
+    def is_phone_number(self, phone_number: str) -> str:
         """
         Validate phone number
         Arguments:
@@ -85,16 +85,5 @@ class Validators:
                     self.phone_number) is None:
             raise GraphQLError("Invalid phone number")
         return self.phone_number
-
-    def is_status(self, status):
-        if status.lower() == "pending" \
-            or status.lower() == "paid" \
-            or status.lower() == "rejected" \
-            or status.lower() == "approved" \
-            or status.lower() == "archived" \
-                or status.lower() == "submitted":
-            return status.lower()
-        raise GraphQLError("{} is a valid status".format(status))
-
 
 validator = Validators()

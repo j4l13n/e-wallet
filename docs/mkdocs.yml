@@ -1,0 +1,9 @@
+site_name: Tekana - eWallet Docs
+
+theme:
+  name: "material"
+
+nav:
+  - Getting Started: getting-started.md
+  - Tutorials: tutorials.md
+  - Reference: reference.md
