@@ -35,7 +35,7 @@ class UserListType(DjangoListObjectType):
         model = User
         description = " Type definition for a single user "
         pagination = LimitOffsetGraphqlPagination(
-            default_limit=25, ordering="-username")
+            default_limit=25, ordering="-email")
         filter_fields = {
             "id": ("exact", ),
             "first_name": ("icontains", "iexact"),
