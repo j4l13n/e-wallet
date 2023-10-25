@@ -15,30 +15,3 @@ class TransactionSerializerMutation(DjangoSerializerMutation):
     class Meta:
         description = "DRF serializer-based Mutation for Transactions"
         serializer_class = TransactionSerializer
-
-class AddTransaction(graphene.Mutation):
-    """
-    Add Transaction Mutation (Traditional)
-
-    Args:
-        new_transaction (obj): transaction object data
-    Returns:
-        success (str): success message
-        transaction (obj): new transaction instance
-    Raises:
-        errors (obj): error object response
-    """
-    success = graphene.String()
-    transaction = graphene.Field(TransactionType)
-
-    class Arguments:
-        new_transaction = graphene.Argument(TransactionInputType)
-
-    @classmethod
-    def mutate(self, root, info):
-        try:
-            transaction_instance = Transaction(**new_transaction)
-        except Exception:
-            raise GraphQLError(ERROR_RESPONSES['something_wrong'])
-        with SaveContextManager(transaction_instance, model=Transaction) as transaction:
-            return AddTransaction(success=SUCCESS_RESPONSES['creation_success'].format('Transaction'), transaction=transaction)
