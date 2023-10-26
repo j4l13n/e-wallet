@@ -7,3 +7,4 @@ nav:
   - Getting Started: getting-started.md
   - Tutorials: tutorials.md
   - Reference: reference.md
+  - Docker Installation Guide: docker-installation.md
