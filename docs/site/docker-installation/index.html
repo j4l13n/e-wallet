@@ -9,8 +9,8 @@
       
       
       
+        <link rel="prev" href="../reference/">
       
-        <link rel="next" href="../tutorials/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -18,7 +18,7 @@
     
     
       
-        <title>Getting Started - Tekana - eWallet Docs</title>
+        <title>Docker Installation Guide - Tekana - eWallet Docs</title>
       
     
     
@@ -63,7 +63,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#getting-started" class="md-skip">
+        <a href="#docker-installation-guide" class="md-skip">
           Skip to content
         </a>
       
@@ -99,7 +99,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Getting Started
+              Docker Installation Guide
             
           </span>
         </div>
@@ -186,29 +186,9 @@
       
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Getting Started
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../getting-started/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -217,75 +197,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
-    Prerequisites
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-1-clone-the-django-repository" class="md-nav__link">
-    Step 1: Clone the Django Repository
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-2-create-a-virtual-environment" class="md-nav__link">
-    Step 2: Create a Virtual Environment
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-3-install-dependencies" class="md-nav__link">
-    Step 3: Install Dependencies
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-4-configure-environment-varibles" class="md-nav__link">
-    Step 4: Configure Environment varibles
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-5-run-migrations" class="md-nav__link">
-    Step 5: Run Migrations
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-6-run-the-development-server" class="md-nav__link">
-    Step 6: Run the Development Server
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -332,9 +243,29 @@
       
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../docker-installation/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Docker Installation Guide
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -343,6 +274,102 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    Prerequisites
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation-steps" class="md-nav__link">
+    Installation Steps
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation Steps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-build-docker-containers" class="md-nav__link">
+    1. Build Docker Containers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-run-development-environment" class="md-nav__link">
+    2. Run Development Environment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-run-database-migrations" class="md-nav__link">
+    3. Run Database Migrations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-shell-access" class="md-nav__link">
+    4. Shell Access
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-running-tests" class="md-nav__link">
+    5. Running Tests
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-clean-up" class="md-nav__link">
+    6. Clean Up
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-viewing-logs" class="md-nav__link">
+    7. Viewing Logs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    Conclusion
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -381,44 +408,71 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-1-clone-the-django-repository" class="md-nav__link">
-    Step 1: Clone the Django Repository
+  <a href="#installation-steps" class="md-nav__link">
+    Installation Steps
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation Steps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-build-docker-containers" class="md-nav__link">
+    1. Build Docker Containers
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#step-2-create-a-virtual-environment" class="md-nav__link">
-    Step 2: Create a Virtual Environment
+        
+          <li class="md-nav__item">
+  <a href="#2-run-development-environment" class="md-nav__link">
+    2. Run Development Environment
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#step-3-install-dependencies" class="md-nav__link">
-    Step 3: Install Dependencies
+        
+          <li class="md-nav__item">
+  <a href="#3-run-database-migrations" class="md-nav__link">
+    3. Run Database Migrations
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#step-4-configure-environment-varibles" class="md-nav__link">
-    Step 4: Configure Environment varibles
+        
+          <li class="md-nav__item">
+  <a href="#4-shell-access" class="md-nav__link">
+    4. Shell Access
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#step-5-run-migrations" class="md-nav__link">
-    Step 5: Run Migrations
+        
+          <li class="md-nav__item">
+  <a href="#5-running-tests" class="md-nav__link">
+    5. Running Tests
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#step-6-run-the-development-server" class="md-nav__link">
-    Step 6: Run the Development Server
+        
+          <li class="md-nav__item">
+  <a href="#6-clean-up" class="md-nav__link">
+    6. Clean Up
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-viewing-logs" class="md-nav__link">
+    7. Viewing Logs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    Conclusion
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -437,87 +491,52 @@
                   
 
 
-<h1 id="getting-started">Getting started</h1>
-<p>This guide will walk you through the process of installing Tekana - eWallet from our GitHub and setting up a virtual environment for your the project.</p>
+<h1 id="docker-installation-guide">Docker Installation Guide</h1>
+<p>This guide will walk you through the process of setting up a Docker environment for your project. Docker is a containerization platform that simplifies the process of deploying and running applications.</p>
 <h2 id="prerequisites">Prerequisites</h2>
 <p>Before you begin, ensure that you have the following prerequisites installed on your system:</p>
 <ul>
-<li><a href="https://www.python.org/">Python</a> (3.6 or higher)</li>
-<li><a href="https://git-scm.com/">Git</a></li>
+<li>Docker: You can download and install Docker from <a href="https://www.docker.com/get-started">Docker's official website</a>.</li>
 </ul>
-<h2 id="step-1-clone-the-django-repository">Step 1: Clone the Django Repository</h2>
-<ol>
-<li>
-<p>Open your terminal or command prompt.</p>
-</li>
-<li>
-<p>Navigate to the directory where you want to store your Django project.</p>
-</li>
-<li>
-<p>Clone the Django repository from GitHub using the following command:</p>
-</li>
-</ol>
-<pre><code class="language-bash">git clone https://github.com/j4l13n/e-wallet.git
+<h2 id="installation-steps">Installation Steps</h2>
+<p>Follow these steps to set up and use Docker for your project:</p>
+<h3 id="1-build-docker-containers">1. Build Docker Containers</h3>
+<p>To build Docker containers for your project, run the following command in your project directory:</p>
+<pre><code class="language-bash">make build
 </code></pre>
-<pre><code class="language-bash">cd e-wallet
+<p>This command uses Docker Compose to build the containers defined in your project's docker-compose.yml file.</p>
+<h3 id="2-run-development-environment">2. Run Development Environment</h3>
+<p>To start your development environment, execute the following command:</p>
+<pre><code class="language-bash">make run-dev
 </code></pre>
-<h2 id="step-2-create-a-virtual-environment">Step 2: Create a Virtual Environment</h2>
-<ol>
-<li>Inside your project directory, create a virtual environment. You can do this using Python's built-in venv module. Replace myenv with your preferred environment name:</li>
-</ol>
-<pre><code class="language-bash">python -m venv myenv
+<p>This command stops and removes any existing containers and then brings up the environment defined in the docker-compose.yml file. It's designed for development purposes.</p>
+<h3 id="3-run-database-migrations">3. Run Database Migrations</h3>
+<p>If your project requires database migrations, you can run them with the following command:</p>
+<pre><code class="language-bash">make run-migrate
 </code></pre>
-<ol>
-<li>Activate the virtual environment:<ul>
-<li>On Windows:</li>
-</ul>
-</li>
-</ol>
-<pre><code class="language-bash">myenv\Scripts\activate
+<p>This command runs database migrations using the python manage.py migrate command within the application container.</p>
+<h3 id="4-shell-access">4. Shell Access</h3>
+<p>You can access the shell of your application container for debugging or running commands using the following:</p>
+<pre><code class="language-bash">make shell
 </code></pre>
-<ul>
-<li>On Mac:</li>
-</ul>
-<pre><code class="language-bash">source myenv/bin/activate
+<p>This will provide you with an interactive shell inside the container.</p>
+<h3 id="5-running-tests">5. Running Tests</h3>
+<p>To run tests for your application, use the following command:</p>
+<pre><code class="language-bash">make test
 </code></pre>
-<p>This will install the necessary Python packages for your project.</p>
-<h2 id="step-3-install-dependencies">Step 3: Install Dependencies</h2>
-<ol>
-<li>
-<p>With the virtual environment active, navigate to your project directory (the one containing the requirements.txt file).</p>
-</li>
-<li>
-<p>Install project dependencies using pip:</p>
-</li>
-</ol>
-<pre><code class="language-bash">pip install -r requirements.txt
+<p>This command executes tests within the application container using pytest or your specified testing framework.</p>
+<h3 id="6-clean-up">6. Clean Up</h3>
+<p>To stop and remove all Docker containers for your project, run:</p>
+<pre><code class="language-bash">make clean
 </code></pre>
-<h2 id="step-4-configure-environment-varibles">Step 4: Configure Environment varibles</h2>
-<ol>
-<li>Create a <code>.env</code> file for environment variables</li>
-</ol>
-<pre><code class="language-bash">cp .env-example &gt; .env
+<p>This is helpful for cleaning up your development environment.</p>
+<h3 id="7-viewing-logs">7. Viewing Logs</h3>
+<p>To view the logs of your application container, you can use the following command:</p>
+<pre><code class="language-bash">make logs
 </code></pre>
-<h2 id="step-5-run-migrations">Step 5: Run Migrations</h2>
-<ol>
-<li>Apply database migrations to create the database tables:</li>
-</ol>
-<pre><code class="language-bash">python manage.py migrate
-</code></pre>
-<ol>
-<li>Create a superuser for the Django admin:</li>
-</ol>
-<pre><code class="language-bash">python manage.py createsuperuser
-</code></pre>
-<h2 id="step-6-run-the-development-server">Step 6: Run the Development Server</h2>
-<ol>
-<li>Start the Django development server:</li>
-</ol>
-<pre><code class="language-bash">python manage.py runserver
-</code></pre>
-<ol>
-<li>Open your web browser and access your Django project at <a href="http://127.0.0.1:8000/">http://127.0.0.1:8000/</a>.</li>
-</ol>
+<p>This will display logs for the 'app' container, which can be useful for debugging.</p>
+<h3 id="conclusion">Conclusion</h3>
+<p>You now have Docker set up for Tekana-eWallet. You can use these commands to build, run, and manage your development environment efficiently. Docker simplifies the process of managing dependencies and ensures consistent environments across different systems.</p>
 
 
 
